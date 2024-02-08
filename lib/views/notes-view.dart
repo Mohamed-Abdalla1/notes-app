@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/views/widgets/add_modal_bottom_shee.dart';
 import 'package:notes_app/views/widgets/note-view-body.dart';
 
 class NotesView extends StatelessWidget {
@@ -22,16 +23,5 @@ class NotesView extends StatelessWidget {
       ),
       body: NotesViewBody(),
     );
-  }
-}
-
-class AddModalButtomSheet extends StatelessWidget {
-  const AddModalButtomSheet({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }
