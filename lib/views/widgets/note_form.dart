@@ -14,7 +14,7 @@ class NoteForm extends StatefulWidget {
 class _NoteFormState extends State<NoteForm> {
   GlobalKey<FormState> globalKey = GlobalKey();
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
-
+  String? title, subTitle;
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -23,15 +23,23 @@ class _NoteFormState extends State<NoteForm> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          CustomTextField(title: 'Title'),
-          SizedBox(
+          CustomTextField(
+            title: 'Title',
+            onSaved: (p0) {
+              title = p0;
+            },
+          ),
+          const SizedBox(
             height: 16,
           ),
           CustomTextField(
             title: 'Content',
             maxLines: 5,
+            onSaved: (p0) {
+              subTitle = p0;
+            },
           ),
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           CustomButton(
