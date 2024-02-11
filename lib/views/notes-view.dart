@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:notes_app/cubits/notes_cubit/cubit/notes_cubit.dart';
 import 'package:notes_app/views/widgets/add_modal_bottom_shee.dart';
 import 'package:notes_app/views/widgets/note-view-body.dart';
 
