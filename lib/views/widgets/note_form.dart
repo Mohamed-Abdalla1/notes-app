@@ -50,7 +50,7 @@ class _NoteFormState extends State<NoteForm> {
             builder: (context, state) {
               var currentDate = DateTime.now();
               var formattedDate =
-                  DateFormat('dd - mm - yy').format(currentDate);
+                  DateFormat('dd - mm - yyyy').format(currentDate);
               return CustomButton(
                 isLoading: state is AddNoteLoading ? true : false,
                 text: 'ADD',
