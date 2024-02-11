@@ -12,7 +12,7 @@ class CustomNoteItem extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return EditNotesView();
+              return const EditNotesView();
             },
           ),
         );
@@ -22,7 +22,7 @@ class CustomNoteItem extends StatelessWidget {
           top: 16.0,
         ),
         child: Container(
-          padding: EdgeInsets.symmetric(vertical: 24),
+          padding: const EdgeInsets.symmetric(vertical: 24),
           decoration: BoxDecoration(
               color: color, borderRadius: BorderRadius.circular(16)),
           child: Column(

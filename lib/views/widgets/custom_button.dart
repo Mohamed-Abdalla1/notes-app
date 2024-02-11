@@ -18,7 +18,7 @@ class CustomButton extends StatelessWidget {
             color: kprimaryColor, borderRadius: BorderRadius.circular(8)),
         child: Center(
             child: isLoading == true
-                ? SizedBox(
+                ? const SizedBox(
                     height: 24,
                     width: 24,
                     child: CircularProgressIndicator(

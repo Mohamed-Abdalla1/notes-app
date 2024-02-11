@@ -22,18 +22,18 @@ class CustomTextField extends StatelessWidget {
       cursorColor: kprimaryColor,
       decoration: InputDecoration(
         hintText: title,
-        hintStyle: TextStyle(color: kprimaryColor),
-        border: Border(),
-        focusedBorder: Border(),
-        enabledBorder: Border(),
+        hintStyle: const TextStyle(color: kprimaryColor),
+        border: border(),
+        focusedBorder: border(),
+        enabledBorder: border(),
       ),
     );
   }
 
-  OutlineInputBorder Border() {
+  OutlineInputBorder border() {
     return OutlineInputBorder(
         borderRadius: BorderRadius.circular(8),
-        borderSide: BorderSide(
+        borderSide: const BorderSide(
           color: Colors.white,
         ));
   }
