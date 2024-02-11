@@ -15,7 +15,9 @@ class CustomNoteItem extends StatelessWidget {
             builder: (context) {
               return const EditNotesView();
             },
+            
           ),
+        
         );
       },
       child: Padding(
