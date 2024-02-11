@@ -28,7 +28,6 @@ class NotesApp extends StatelessWidget {
       create: (context) => NotesCubit(),
       child: MaterialApp(
         routes: {
-          EditNotesView.id :(context) => EditNotesView(),
           NotesView.id :(context) => NotesView()
 
         },
