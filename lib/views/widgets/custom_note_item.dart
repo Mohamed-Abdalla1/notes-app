@@ -53,7 +53,7 @@ class CustomNoteItem extends StatelessWidget {
                     notesModel.delete();
                     BlocProvider.of<NotesCubit>(context).fetchAllNotes();
                   },
-                  icon: Icon(Icons.delete),
+                  icon:const Icon(Icons.delete),
                   color: Colors.black,
                 ),
               ),

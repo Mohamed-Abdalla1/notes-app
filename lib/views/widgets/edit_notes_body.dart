@@ -5,6 +5,7 @@ import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/views/notes-view.dart';
 import 'package:notes_app/views/widgets/custom_appbar.dart';
 import 'package:notes_app/views/widgets/custom_textfield.dart';
+import 'package:notes_app/views/widgets/edit_notes_colors_list.dart';
 
 class EditNotesBody extends StatefulWidget {
   const EditNotesBody({super.key, required this.noteModel});
@@ -19,7 +20,7 @@ class _EditNotesBodyState extends State<EditNotesBody> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+      padding: const EdgeInsets.symmetric(horizontal: 32.0),
       child: Column(
         children: [
           const SizedBox(
@@ -55,8 +56,15 @@ class _EditNotesBodyState extends State<EditNotesBody> {
             title: widget.noteModel.subTitle,
             maxLines: 5,
           ),
+          const SizedBox(
+            height: 35,
+          ),
+          EditNotesColorsList(
+            notes: widget.noteModel,
+          ),
         ],
       ),
     );
   }
 }
+
