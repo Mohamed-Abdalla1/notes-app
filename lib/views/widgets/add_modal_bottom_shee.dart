@@ -11,8 +11,8 @@ class AddModalButtomSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 32),
+    return BlocProvider(
+      create: (context) => AddNoteCubit(),
       child: BlocConsumer<AddNoteCubit, AddNoteState>(
         listener: (context, state) {
           if (state is AddNoteSuccess) {
@@ -23,10 +23,17 @@ class AddModalButtomSheet extends StatelessWidget {
           }
         },
         builder: (context, state) {
-          return const ModalProgressHUD(
-            inAsyncCall: State is AddNoteLoading ? true : false,
-            child: SingleChildScrollView(
-              child: NoteForm(),
+          return AbsorbPointer(
+            absorbing: state is AddNoteLoading ? true : false,
+            child:  Padding(
+              padding: EdgeInsets.only(
+                  left: 16.0,
+                  right: 16,
+                  top: 32,
+                  bottom: MediaQuery.of(context).viewInsets.bottom),
+              child: const SingleChildScrollView(
+                child: NoteForm(),
+              ),
             ),
           );
         },
